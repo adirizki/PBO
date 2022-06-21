@@ -15,10 +15,34 @@ public class Pegawai {
 
     public Pegawai() {
     }
-        
+
+    public String getNpp() {
+        return npp;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public double getGaji() {
+        return gaji;
+    }
+
+    public void setNpp(String npp) {
+        this.npp = npp;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public void setGaji(double gaji) {
+        this.gaji = gaji;
+    }
+    
     public void showData(){
-        System.out.println("NPP                     : "+npp);
-        System.out.println("Nama                    : "+nama);
-        System.out.println("Gaji Pokok              : "+gaji);
+        System.out.println("NPP                     : "+getNpp());
+        System.out.println("Nama                    : "+getNama());
+        System.out.println("Gaji Pokok              : "+getGaji());
     }
 }

@@ -16,8 +16,21 @@ public class Dosen extends Pegawai implements IHitungTotal{
     public Dosen() {
     }
 
-    public Dosen(int jmlMatkul) {
-        this.jumlahMatkul = jmlMatkul;
+    
+    public int getJumlahMatkul() {
+        return jumlahMatkul;
+    }
+
+    public int getJumlahSertifikasi() {
+        return jumlahSertifikasi;
+    }
+
+    public void setJumlahMatkul(int jumlahMatkul) {
+        this.jumlahMatkul = jumlahMatkul;
+    }
+
+    public void setJumlahSertifikasi(int jumlahSertifikasi) {
+        this.jumlahSertifikasi = jumlahSertifikasi;
     }
     
     public Dosen(float jmlSertifikasi) {
@@ -32,8 +45,8 @@ public class Dosen extends Pegawai implements IHitungTotal{
     @Override
     public void showData(){
         pegawai.showData();
-        System.out.println("Jumlah Mata Kuliah      : "+jumlahMatkul);
-        System.out.println("Jumlah Sertifikasi      : "+jumlahSertifikasi);
+        System.out.println("Jumlah Mata Kuliah      : "+getJumlahMatkul());
+        System.out.println("Jumlah Sertifikasi      : "+getJumlahSertifikasi());
         System.out.println("Total Pendapatan        : "+totalPendapatan());
     }
 }

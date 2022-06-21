@@ -5,9 +5,6 @@
 
 package com.rizkimugi.quiz1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -18,25 +15,27 @@ public class Quiz1 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int x;
-        float y;
         Pegawai pegawai = new Pegawai();
         Dosen dosen = new Dosen();
         
         System.out.println("NPP                 : ");
-        pegawai.npp = input.nextLine();
+        String a = input.nextLine();
+        pegawai.setNpp(a);
         System.out.println("Nama                : ");
-        pegawai.nama = input.nextLine();
+        String b = input.nextLine();
+        pegawai.setNama(b);
         System.out.println("Gaji Pokok          : ");
-        pegawai.gaji = input.nextDouble();
+        double c = input.nextDouble();
+        pegawai.setGaji(c);
         System.out.println("Jumlah Mata Kuliah  : ");
-        x = input.nextInt();
-        Dosen dosen1 = new Dosen(x);
+        int x = input.nextInt();
+        dosen.setJumlahMatkul(x);
         System.out.println("Jumlah Sertifikasi  : ");
-        y = input.nextFloat();
-        Dosen dosen2 = new Dosen(y);        
+        int y = input.nextInt();
+        dosen.setJumlahSertifikasi(y);
         System.out.println();
         System.out.println("========= Data Dosen =============");
+        
         dosen.showData();
     }
 }
